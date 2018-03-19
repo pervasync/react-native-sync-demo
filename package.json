@@ -1,0 +1,58 @@
+{
+  "name": "react-native-sync-demo",
+  "version": "1.0.0",
+  "description": "Demo React Native App for react-native-sync",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pervasync/react-native-sync-demo.git"
+  },
+  "keywords": [
+    "React Native",
+    "realmjs",
+    "db",
+    "sync",
+    "database",
+    "MySQL",
+    "Oracle",
+    "SQL Server",
+    "PostgreSQL"
+  ],
+  "author": "pervasync@pervasync.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pervasync/react-native-sync-demo/issues"
+  },
+  "homepage": "https://github.com/pervasync/react-native-sync-demo#readme",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-native": "^0.54.2",
+    "react-native-doc-viewer": "^2.7.3",
+    "react-native-elements": "^0.19.0",
+    "react-native-fetch-blob": "^0.10.6",
+    "react-native-sync": "^1.0.1",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.5.8",
+    "realm": "^2.3.1",
+    "tcomb-form-native": "^0.6.11"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.0.0-alpha.0",
+    "babel-preset-react-native": "^4.0.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.2",
+    "react-test-renderer": "^16.2.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
