@@ -19,7 +19,7 @@ After you save the server url and user credentials, navigate to the `Database` t
 |||
 |:-------------:| :-------------:|
 |![settings.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/settings.png)|![pull_sync.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/pull_sync.png)|
-|![database.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/database.png)|![record_editor.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/record_editorpng)|
+|![database.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/database.png)|![record_editor.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/record_editor.png)|
 |![files.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/files.png)|![doc_viewer.png](https://github.com/pervasync/react-native-sync-demo/raw/master/docs/doc_viewer.png)|
 
 ### Your own sync server and React Native app
