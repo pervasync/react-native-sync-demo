@@ -22,7 +22,8 @@ async function loadSettings() {
             Object.assign(settings, JSON.parse(str));
         }
     } else {
-        settings["syncServerUrl"] = "http://localhost:8080/pervasync/server";
+        //settings["syncServerUrl"] = "http://localhost:8080/pervasync/server";
+        settings["syncServerUrl"] = "http://203.195.233.31:8080/pervasync/server";
     }
     settingsLoaded = true;
     console.log("end loadSettings");

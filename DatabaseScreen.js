@@ -90,9 +90,14 @@ class DatabaseScreen extends React.Component {
           // listData
           console.log("formValue.schemaPicker=" + formValue.schemaPicker);
           this.syncSchema = RNSync.clientSchemaMap[formValue.schemaPicker];
-          this.syncTable = this.syncSchema.tableMap[formValue.tablePicker];
-          this.realm = await sync.getRealm(this.syncSchema.name);
-          let listData = this.realm.objects(this.syncTable.name);
+          if(this.syncSchema){
+            this.syncTable = this.syncSchema.tableMap[formValue.tablePicker];
+            this.realm = await sync.getRealm(this.syncSchema.name);
+          }
+          let listData = [];
+          if(this.realm && this.syncTable){
+            listData = this.realm.objects(this.syncTable.name);
+          }
           this.setState({
             listData
           });
@@ -120,24 +125,30 @@ class DatabaseScreen extends React.Component {
     return "" + index;
   }
 
-  // update listData when force update
   forceUpdate = async () => {
+
+    // update form 
     this.getFormType().then((formType) => {
       this.setState({
         formType
       });
     });
 
-    if (this.syncSchema) {
+    // update listData 
+    console.log("this.state.formValue.schemaPicker=" + this.state.formValue.schemaPicker);
+    this.syncSchema = RNSync.clientSchemaMap[this.state.formValue.schemaPicker];
+    if(this.syncSchema){
+      this.syncTable = this.syncSchema.tableMap[this.state.formValue.tablePicker];
       this.realm = await sync.getRealm(this.syncSchema.name);
     }
     let listData = [];
-    if (this.syncTable && this.realm) {
+    if(this.realm && this.syncTable){
       listData = this.realm.objects(this.syncTable.name);
     }
     this.setState({
       listData
     });
+
     console.log("Calling super.forceUpdate");
     super.forceUpdate();
   }
